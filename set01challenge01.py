@@ -27,7 +27,7 @@ def bytes_to_base64(bytes_string):
 
 
 def hex_to_base64(hex_string):
-    # ASCII decoding used to print compare result with expected result
+    # ASCII decoding used to compare print result with expected result
     return bytes_to_base64(hex_to_bytes(hex_string)).decode('ascii')
 
 
