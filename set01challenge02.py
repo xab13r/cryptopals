@@ -1,11 +1,11 @@
 '''
+
 Matasano Crypto Challenges
 Set 01 - Challenge 02
 
 FIXED XOR
 
 '''
-
 
 import codecs
 import base64
