@@ -14,7 +14,9 @@ from set01challenge03 import break_singlebyte_xor, english_score
 expected_result = 'Now that the party is jumping'
 
 # Open file and create a list of ciphertext in type byte
-ciphertexts = [hex_to_bytes(i) for i in open("set01challenge04.txt").read().splitlines()]
+ciphertexts = [hex_to_bytes(i) for i in open(
+    "set01challenge04.txt").read().splitlines()]
+
 
 def main():
 
@@ -22,14 +24,15 @@ def main():
     possible_results = [break_singlebyte_xor(i) for i in ciphertexts]
 
     # Run all plaintexts through english_score and save the score
-    scored_results = [english_score(i.get('plaintext')) for i in possible_results]
+    scored_results = [english_score(i.get('plaintext'))
+                      for i in possible_results]
 
     # Get index of best score
     best_result_index = scored_results.index(max(scored_results))
 
     solution = possible_results[best_result_index]
     # Print result in a legible way
-    
+
     print(
         solution['plaintext'].decode().rstrip(),
         "\nScore:", solution['score'],
