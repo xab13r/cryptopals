@@ -32,16 +32,16 @@ def xor_strings(string1, string2):
     for i in range(len(bytes_string1)):
         xor_string += bytes([bytes_string1[i] ^ bytes_string2[i]])
 
-    return xor_string # Value returned is type bytes
+    return xor_string  # Value returned is type bytes
 
 
 def main():
-    
+
     print(string1)
     print(string2)
-    
+
     print(binascii.hexlify(xor_strings(string1, string2)))
-    
+
     if xor_strings(string1, string2) != binascii.unhexlify(expected_result):
         raise Exception("Error - Strings don\'t match")
     else:
