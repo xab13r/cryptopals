@@ -7,10 +7,8 @@ DETECT AES IN ECB MODE
 
 '''
 
-#from Crypto.Cipher import AES
 from set01challenge01 import hex_to_bytes
 from set01challenge06 import slice_target
-import itertools
 
 # Open file and create a list of ciphertext in type byte
 ciphertexts = [hex_to_bytes(i) for i in open(
