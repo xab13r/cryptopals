@@ -40,7 +40,7 @@ def hamming_distance(string1, string2):
 
 def slice_target(ciphertext, keysize):
     # Break the ciphertext into blocks of keysize length
-    return [ciphertext[i*keysize:(i+1)*keysize] for i in range(len(target) // keysize)]
+    return [ciphertext[i:i+keysize] for i in range(0, len(ciphertext), keysize)]
 
 
 def guess_keysize(ciphertext, keysize):
