@@ -46,7 +46,7 @@ def single_xor(bytes_ciphertext, single_key):  # Input needs to be type bytes
     return output
 
 
-def break_singlebyte_xor(bytes_input, ):
+def break_singlebyte_xor(bytes_input):
     possible_results = []
 
     # Try all the key
