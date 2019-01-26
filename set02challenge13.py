@@ -79,7 +79,7 @@ def main():
     Encoding the two email addresses:
 
     16 bytes blocks for email1:
-    email=foo@bar.co | mmm&uid=10&role= | user + padding
+    email=foo@baar.c | om&uid=10&role= | user + padding
 
     16 bytes blocks for email2:
     email=foo@bar.co | admin x0b * 11 | user + padding
