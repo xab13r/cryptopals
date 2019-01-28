@@ -21,7 +21,6 @@ def encryption_oracle(plaintext):
 
     expanded_plaintext = plaintext + encoded_suffix
 
-    ciphertext = b""
     cipher_ecb = ecb_module()
     ciphertext = cipher_ecb.ecb_encrypt(expanded_plaintext, random_key)
 
