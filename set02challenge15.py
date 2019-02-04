@@ -19,15 +19,11 @@ def validate_padding(bytes_string):
     expected_padding = bytes(padding_value * [padding_value])
     actual_padding = bytes_string[-padding_value:]
 
-    if padding_value == 0:
-        raise Exception("--- Bad Padding ---")
-
-    elif actual_padding != expected_padding:
-        raise Exception("--- Bad Padding ---")
-    
-    elif actual_padding == expected_padding:
-        stripped_string = bytes_string[:-padding_value]
-        return stripped_string
+    if (actual_padding != expected_padding) or (padding_value == 0):
+        raise ValueError("--- Bad Padding ---")
+        
+    stripped_string = bytes_string[:-padding_value]
+    return stripped_string
 
 
 def main():
