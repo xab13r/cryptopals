@@ -27,7 +27,7 @@ All solutions are written for Python 3.x, unless specified.
 - [x] Challenge 17 - [The CBC padding oracle](https://github.com/xab13r/cryptopals/blob/master/set03challenge17.py)
 - [x] Challenge 18 - [Implement CTR, the stream cipher mode](https://github.com/xab13r/cryptopals/blob/master/set03challenge18.py)
 - [x] Challenge 19 - [Break fixed-nonce CTR mode using substitutions](https://github.com/xab13r/cryptopals/blob/master/set03challenge19.py)
-- [ ] Challenge 20 - Break fixed-nonce CTR statistically
+- [x] Challenge 20 - [Break fixed-nonce CTR statistically](https://github.com/xab13r/cryptopals/blob/master/set03challenge20.py)
 - [ ] Challenge 21 - Implement the MT19937 Mersenne Twister RNG
 - [ ] Challenge 22 - Crack an MT19937 seed
 - [ ] Challenge 23 - Clone an MT19937 RNG from its output
