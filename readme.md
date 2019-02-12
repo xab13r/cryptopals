@@ -30,7 +30,7 @@ All solutions are written for Python 3.x, unless specified.
 - [x] Challenge 20 - [Break fixed-nonce CTR statistically](https://github.com/xab13r/cryptopals/blob/master/set03challenge20.py)
 - [x] Challenge 21 - [Implement the MT19937 Mersenne Twister RNG](https://github.com/xab13r/cryptopals/blob/master/set03challenge21.py)
 - [x] Challenge 22 - [Crack an MT19937 seed](https://github.com/xab13r/cryptopals/blob/master/set03challenge22.py)
-- [ ] Challenge 23 - Clone an MT19937 RNG from its output
+- [x] Challenge 23 - [Clone an MT19937 RNG from its output](https://github.com/xab13r/cryptopals/blob/master/set03challenge23.py)
 - [ ] Challenge 24 - Create the MT19937 stream cipher and break it
 
 ## Set 04 - Stream crypto and randomness
