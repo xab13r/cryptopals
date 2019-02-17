@@ -18,6 +18,7 @@ nonce = struct.pack('Q', 0)
 prefix = b"comment1=cooking%20MCs;userdata="
 suffix = b";comment2=%20like%20a%20pound%20of%20bacon"
 
+
 def encrypt_parameters(input_string):
 
     # Quote out '=' and ';' from input string and convert to bytes
@@ -30,6 +31,7 @@ def encrypt_parameters(input_string):
     ciphertext = cipher.ctr(parameters_string)
     return ciphertext
 
+
 def decrypt_parameters_and_check_admin(input_string):
     cipher = ctr_module(key, nonce)
     plaintext = cipher.ctr(input_string)
@@ -37,6 +39,7 @@ def decrypt_parameters_and_check_admin(input_string):
         return True
     else:
         return False
+
 
 def main():
     # Verify '=', ',', and ';' are sanitized on input
@@ -56,7 +59,7 @@ def main():
         print("--- Success ---")
     else:
         raise Exception("*** Failed ***")
-    
+
 
 if __name__ == "__main__":
     main()
