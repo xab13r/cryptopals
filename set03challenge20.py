@@ -12,7 +12,6 @@ from set03challenge18 import ctr_module
 from Crypto.Random import get_random_bytes
 from Crypto.Util.strxor import strxor
 from set01challenge03 import break_singlebyte_xor
-
 import itertools
 
 target = open('set03challenge20.txt', 'r').readlines()
