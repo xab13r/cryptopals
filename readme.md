@@ -35,7 +35,7 @@ All solutions are written for Python 3.x, unless specified.
 
 ## Set 04 - Stream crypto and randomness
 - [x] Challenge 25 - [Break "random access read/write" AES CTR](https://github.com/xab13r/cryptopals/blob/master/set03challenge25.py)
-- [ ] Challenge 26 - CTR bitflipping
+- [x] Challenge 26 - [CTR bitflipping](https://github.com/xab13r/cryptopals/blob/master/set03challenge26.py)
 - [ ] Challenge 27 - Recover the key from CBC with IV=Key
 - [ ] Challenge 28 - Implement a SHA-1 keyed MAC
 - [ ] Challenge 29 - Break a SHA-1 keyed MAC using length extension
