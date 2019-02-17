@@ -34,7 +34,7 @@ All solutions are written for Python 3.x, unless specified.
 - [x] Challenge 24 - [Create the MT19937 stream cipher and break it](https://github.com/xab13r/cryptopals/blob/master/set03challenge24.py)
 
 ## Set 04 - Stream crypto and randomness
-- [ ] Challenge 25 - Break "random access read/write" AES CTR
+- [x] Challenge 25 - [Break "random access read/write" AES CTR](https://github.com/xab13r/cryptopals/blob/master/set03challenge25.py)
 - [ ] Challenge 26 - CTR bitflipping
 - [ ] Challenge 27 - Recover the key from CBC with IV=Key
 - [ ] Challenge 28 - Implement a SHA-1 keyed MAC
