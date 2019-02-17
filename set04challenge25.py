@@ -12,8 +12,6 @@ import base64
 from set03challenge18 import ctr_module
 from Crypto.Util.strxor import strxor
 import struct
-import sys
-import time
 
 
 def edit(ciphertext, offset, new_text):
