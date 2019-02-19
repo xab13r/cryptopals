@@ -19,22 +19,23 @@ expected_result = '0b3637272a2b2e63622c2e69692a23693a2a3c6324202d623d63343c2a262
 
 
 def repeating_key_xor(input_string, key):
-    # xor_string function accepts hex encoded strings as inputs
-    hex_input_string = binascii.hexlify(input_string)
-    hex_key = binascii.hexlify(key)
-    xor_string = xor_strings(hex_input_string, hex_key)
-    return xor_string
+    # Make input_strings and key the same length
+    if len(input_string) > len(key):
+        key *= int(len(input_string)/len(key)+1)
+        key = key[:len(input_string)]
+
+    if len(input_string) < len(key):
+        input_string *= int(len(key)/len(input_string)+1)
+        input_string = string1[:len(key)]
+    
+    return xor_strings(input_string, key)
 
 
 def main():
 
-    print(binascii.hexlify(repeating_key_xor(plaintext, key)))
-#    print(binascii.unhexlify(expected_result))
-#    print(binascii.unhexlify(repeating_key_xor(plaintext, key)))
-
     # Check result against expected
     if repeating_key_xor(plaintext, key) != binascii.unhexlify(expected_result):
-        raise Exception("Error - Strings don\'t match")
+        raise Exception("*** ERROR *** - Strings don\'t match")
     else:
         print("--- Success ---")
 
