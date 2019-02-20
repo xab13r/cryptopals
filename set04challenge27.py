@@ -9,7 +9,7 @@ RECOVER THE KEY FROM CBC WITH IV=KEY
 
 from Crypto.Random import get_random_bytes
 from set02challenge10 import cbc_module
-from Crypto.Util.strxor import strxor
+from set01challenge02 import xor_strings
 
 key = get_random_bytes(16)
 iv = key
@@ -48,7 +48,7 @@ def main():
     ciphertext = encrypt_parameters(three_block_message)
     chosen_ciphertext = ciphertext[:16] + bytes([0]) * 16 + ciphertext[:16]
     output = decrypt_and_check_ascii(chosen_ciphertext)
-    recovered_key = strxor(output[:16], output[32:])
+    recovered_key = xor_strings(output[:16], output[32:])
 
     if recovered_key == key:
         print("\nExpected key:", key)
