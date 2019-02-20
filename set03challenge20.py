@@ -10,7 +10,7 @@ import base64
 import struct
 from set03challenge18 import ctr_module
 from Crypto.Random import get_random_bytes
-from Crypto.Util.strxor import strxor
+from set01challenge02 import xor_strings
 from set01challenge03 import break_singlebyte_xor
 import itertools
 
@@ -54,7 +54,7 @@ def main():
 
     print("Recovered key:", keystream)
 
-    recovered_plaintext = [strxor(keystream, i)
+    recovered_plaintext = [xor_strings(keystream, i)
                            for i in encrypted_target_truncated]
 
     # First byte of keystream doesn't produce correct plaintext due to statistical limitation
@@ -67,7 +67,7 @@ def main():
     new_first_byte = bytes(chr(new_byte), 'utf-8')
     keystream = new_first_byte + keystream[1:]
 
-    recovered_plaintext = [strxor(keystream, i)
+    recovered_plaintext = [xor_strings(keystream, i)
                            for i in encrypted_target_truncated]
 
     # Check decryption is correct
