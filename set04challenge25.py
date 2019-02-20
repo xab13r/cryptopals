@@ -10,7 +10,6 @@ BREAK "RANDOM ACCESS READ/WRITE" AES CTR
 from Crypto.Cipher import AES
 import base64
 from set03challenge18 import ctr_module
-from Crypto.Util.strxor import strxor
 import struct
 
 
