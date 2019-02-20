@@ -12,7 +12,7 @@ from Crypto.Cipher import AES
 from Crypto.Util.strxor import strxor
 from set02challenge09 import pkcs7_padding
 from set01challenge06 import slice_target
-from Crypto.Random.random import randint
+from random import randint
 from set02challenge10 import cbc_module
 from set02challenge15 import validate_padding
 

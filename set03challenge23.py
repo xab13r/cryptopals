@@ -8,7 +8,7 @@ CLONE AN MT19937 RNG FROM ITS OUTPUT
 '''
 
 from set03challenge21 import MT19937
-from Crypto.Random.random import randint
+from random import randint
 
 
 def get_bit(number, position):

@@ -8,7 +8,7 @@ CRACK AN MT19937 SEED
 '''
 
 from set03challenge21 import MT19937
-from Crypto.Random.random import randint
+from random import randint
 from time import time
 
 # Save current timestamp

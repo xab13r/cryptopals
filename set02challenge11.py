@@ -10,7 +10,8 @@ AN ECB/CBC DETECTION ORACLE
 import base64
 from Crypto.Cipher import AES
 from os import urandom as get_random_bytes
-from Crypto.Random.random import randint
+#from Crypto.Random.random import randint
+from random import randint
 from set02challenge09 import pkcs7_padding
 from set01challenge06 import slice_target
 from set02challenge10 import cbc_module
@@ -75,18 +76,17 @@ def encryption_oracle(plaintext):
     # print("Plaintext:", plaintext)
     choice = randint(1, 2)
     print("Choice:", choice)
-    print()
 
     ciphertext = b""
     cipher_ecb = ecb_module()
     cipher_cbc = cbc_module(random_iv, random_key)
 
     if choice == 1:
-        print("ECB")
+        print("Encryption engine: ECB")
         ciphertext = cipher_ecb.ecb_encrypt(plaintext, random_key)
 
     elif choice == 2:
-        print("CBC")
+        print("Encryption engine: CBC")
         ciphertext = cipher_cbc.cbc_encrypt(plaintext)
 
     return ciphertext
@@ -98,9 +98,9 @@ def main():
     # Create a 3 blocks of 0x00. This way when the oracle is encrypting the plaintext in ECB mode the second and third block will be the same
     oracle = encryption_oracle(bytes([0]*48))
     if oracle[16:32] == oracle[32:48]:
-        print("--- Encrypting using ECB ---")
+        print("Oracle response: --- Encrypting using ECB ---")
     else:
-        print("--- Encrypting using CBC ---")
+        print("Oracle response: --- Encrypting using CBC ---")
 
 
 if __name__ == "__main__":
