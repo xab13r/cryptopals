@@ -10,8 +10,8 @@ import base64
 import struct
 from set03challenge18 import ctr_module
 from Crypto.Random import get_random_bytes
-from Crypto.Util.strxor import strxor
-
+#from Crypto.Util.xor_strings import xor_strings
+from set01challenge02 import xor_strings
 
 target = open('set03challenge19.txt', 'r').readlines()
 target_list = [base64.b64decode(line) for line in target]
@@ -59,7 +59,7 @@ def decrypt_target(guessed_key, encrypted_target):
     # Account for the length value of both the ciphertext and the key
     # Short the key to the length of the ciphertext and viceversa
     # The decryption process is a simple XOR
-    decrypted_target = [strxor(guessed_key[:len(i)], i[:key_length])
+    decrypted_target = [xor_strings(guessed_key[:len(i)], i[:key_length])
                         for i in encrypted_target]
     return decrypted_target
 
