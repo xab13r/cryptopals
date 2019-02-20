@@ -9,7 +9,7 @@ CREATE THE MT19937 STREAM CIPHER AND BREAK IT
 
 from set03challenge21 import MT19937
 from Crypto.Random.random import randint
-from Crypto.Random import get_random_bytes
+from os import urandom as get_random_bytes
 from set01challenge02 import xor_strings
 import struct
 from time import time

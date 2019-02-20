@@ -7,7 +7,7 @@ ECB CUT & PASTE
 
 '''
 
-from Crypto.Random import get_random_bytes
+from os import urandom as get_random_bytes
 from set02challenge11 import ecb_module
 
 kv = 'foo=bar&baz=qux&zap=zazzle'

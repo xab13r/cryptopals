@@ -7,7 +7,7 @@ PKCS#7 PADDING VALIDATION
 
 '''
 
-from Crypto.Random import get_random_bytes
+from os import urandom as get_random_bytes
 from set02challenge11 import ecb_module
 
 target_string = b"ICE ICE BABY\x04\x04\x04\x04"

@@ -7,7 +7,7 @@ RECOVER THE KEY FROM CBC WITH IV=KEY
 
 '''
 
-from Crypto.Random import get_random_bytes
+from os import urandom as get_random_bytes
 from set02challenge10 import cbc_module
 from set01challenge02 import xor_strings
 

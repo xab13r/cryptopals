@@ -9,7 +9,7 @@ BREAK FIXED-NONCE CTR MODE USING SUBSTITUTIONS
 import base64
 import struct
 from set03challenge18 import ctr_module
-from Crypto.Random import get_random_bytes
+from os import urandom as get_random_bytes
 from set01challenge02 import xor_strings
 
 target = open('set03challenge19.txt', 'r').readlines()

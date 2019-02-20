@@ -8,7 +8,7 @@ BYTE-AT-A-TIME ECB DECRYPTION (SIMPLE)
 '''
 
 import base64
-from Crypto.Random import get_random_bytes
+from os import urandom as get_random_bytes
 from set02challenge11 import ecb_module
 
 
