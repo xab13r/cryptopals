@@ -9,7 +9,7 @@ IMPLEMENT CBC MODE
 
 import base64
 from Crypto.Cipher import AES
-from Crypto.Util.strxor import strxor
+from set01challenge02 import xor_strings
 from set02challenge09 import pkcs7_padding
 from set01challenge06 import slice_target
 
@@ -39,7 +39,7 @@ class cbc_module():
 
         for i in range(len(plaintext)):
             cipherblocks[i] = self.cipher.encrypt(
-                strxor(plaintext[i], previous_block))
+                xor_strings(plaintext[i], previous_block))
             previous_block = cipherblocks[i]
 
         ciphertext = b""
@@ -55,7 +55,7 @@ class cbc_module():
         plainblocks = [b"" for i in ciphertext]
 
         for i in range(len(ciphertext)):
-            plainblocks[i] = strxor(self.cipher.decrypt(
+            plainblocks[i] = xor_strings(self.cipher.decrypt(
                 ciphertext[i]), previous_block)
             previous_block = ciphertext[i]
 
