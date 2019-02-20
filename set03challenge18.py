@@ -9,7 +9,7 @@ IMPLEMENT CTR
 import base64
 import struct
 from Crypto.Cipher import AES
-from Crypto.Util.strxor import strxor
+from set01challenge02 import xor_strings
 from set01challenge06 import slice_target
 
 target = base64.b64decode('L77na/nrFsKvynd6HzOoG7GHTLXsTVu9qvY/2syLXzhPweyyMTJULu/6/kXX0KSvoOLSFQ==')
@@ -46,7 +46,7 @@ class ctr_module():
             # Generate keystream
             ciphertext = self.cipher.encrypt(block_stream)
             # Generate plaintext
-            plaintext += strxor(blocks[i], ciphertext[:len(blocks[i])])
+            plaintext += xor_strings(blocks[i], ciphertext[:len(blocks[i])])
 
         return plaintext
 
