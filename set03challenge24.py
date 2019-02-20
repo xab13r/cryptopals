@@ -10,7 +10,7 @@ CREATE THE MT19937 STREAM CIPHER AND BREAK IT
 from set03challenge21 import MT19937
 from Crypto.Random.random import randint
 from Crypto.Random import get_random_bytes
-from Crypto.Util.strxor import strxor
+from set01challenge02 import xor_strings
 import struct
 from time import time
 
@@ -32,7 +32,7 @@ class MT19937_cipher:
             keystream = keystream[:len(plaintext)]
 
         # XOR the keystream with the plaintext
-        return strxor(keystream, plaintext)
+        return xor_strings(keystream, plaintext)
 
     def decrypt(self, ciphertext):
         # Because of the XOR operation, decryption and encryption are the same
