@@ -9,7 +9,6 @@ AN ECB/CBC DETECTION ORACLE
 
 import base64
 from Crypto.Cipher import AES
-from Crypto.Util.strxor import strxor
 from Crypto.Random import get_random_bytes
 from Crypto.Random.random import randint
 from set02challenge09 import pkcs7_padding
