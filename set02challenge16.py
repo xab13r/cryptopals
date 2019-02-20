@@ -36,6 +36,7 @@ def decrypt_parameters_and_check_admin(input_string):
     cipher = cbc_module(iv, key)
     plaintext = cipher.cbc_decrypt(input_string)
     if b";admin=true;" in plaintext:
+        print("Plaintext:", plaintext)
         return True
     else:
         return False
@@ -56,11 +57,11 @@ def generate_admin_profile():
     # Isolate IV block
     iv_to_use = ciphertext_blocks[index_of_iv_to_use]
     # XOR in IV with target value
-    hex_iv = binascii.hexlify(iv_to_use)
-    hex_known = binascii.hexlify(b'X'*16)
-    hex_target = binascii.hexlify(b";admin=true;\x04\x04\x04\x04")
-    new_hex_iv = xor_strings(hex_iv, binascii.hexlify(
-        xor_strings(hex_target, hex_known)))
+    hex_iv = iv_to_use
+    hex_known = b'X'*16
+    hex_target = b";admin=true;\x04\x04\x04\x04"
+    new_hex_iv = xor_strings(hex_iv,
+        xor_strings(hex_target, hex_known))
     # Inject block into ciphertext
     ciphertext_blocks[index_of_iv_to_use] = new_hex_iv
     # Re-generate ciphertext from block

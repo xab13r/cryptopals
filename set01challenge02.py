@@ -12,12 +12,6 @@ import binascii
 
 def xor_strings(string1, string2):
 
-    if type(string1) is not bytes and type(string2) is not bytes:
-        # Convert to type bytes
-        string1 = binascii.unhexlify(string1)
-        string2 = binascii.unhexlify(string2)
-
-
     # Make strings the same length
     if len(string1) > len(string2):
         string2 *= int(len(string1)/len(string2)+1)
@@ -26,6 +20,11 @@ def xor_strings(string1, string2):
     if len(string1) < len(string2):
         string1 *= int(len(string2)/len(string1)+1)
         string1 = string1[:len(string2)]
+
+    if type(string1) is not bytes and type(string2) is not bytes:
+        # Convert to type bytes
+        string1 = binascii.unhexlify(string1)
+        string2 = binascii.unhexlify(string2)
 
     xor_string = b''
     for i in range(len(string1)):
