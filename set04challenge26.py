@@ -8,7 +8,7 @@ CTR BITFLIPPING
 '''
 
 from set03challenge18 import ctr_module
-from Crypto.Util.strxor import strxor
+from set01challenge02 import xor_strings
 import struct
 
 #key = get_random_bytes(16)
