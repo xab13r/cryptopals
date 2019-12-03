@@ -44,7 +44,7 @@ All solutions are written for Python 3.x, unless specified.
 - [ ] Challenge 32 - Break HMAC-SHA1 with a slightly less artificial timing leak
 
 ## Set 05 - Diffie-Hellman and friends
-- [x] Challenge 33 - Implement Diffie-Hellman
+- [x] Challenge 33 - [Implement Diffie-Hellman](https://github.com/xab13r/cryptopals/blob/master/set05challenge33.py)
 - [ ] Challenge 34 - Implement a MITM key-fixing attack on Diffie-Hellman with parameter injection
 - [ ] Challenge 35 - Implement DH with negotiated groups, and break with malicious "g" parameters
 - [ ] Challenge 36 - Implement Secure Remote Password (SRP)
