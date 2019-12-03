@@ -45,7 +45,7 @@ All solutions are written for Python 3.x, unless specified.
 
 ## Set 05 - Diffie-Hellman and friends
 - [x] Challenge 33 - [Implement Diffie-Hellman](https://github.com/xab13r/cryptopals/blob/master/set05challenge33.py)
-- [ ] Challenge 34 - Implement a MITM key-fixing attack on Diffie-Hellman with parameter injection
+- [x] Challenge 34 - [Implement a MITM key-fixing attack on Diffie-Hellman with parameter injection](https://github.com/xab13r/cryptopals/blob/master/set05challenge34.py)
 - [ ] Challenge 35 - Implement DH with negotiated groups, and break with malicious "g" parameters
 - [ ] Challenge 36 - Implement Secure Remote Password (SRP)
 - [ ] Challenge 37 - Break SRP with a zero key
